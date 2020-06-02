@@ -19,7 +19,7 @@ def contour_with_quiver(f, x, y, grad_x, grad_y, norm=LogNorm(), level = np.logs
 	dz_dx = grad_x(x,y)
 	dz_dy = grad_y(x,y)
 
-	fig, ax = plt.subplots()
+	fig, ax = plt.subplots(figsize=(16,10))
 
 	ax.contour(x, y, f(x,y), levels=level, norm=norm, cmap=plt.cm.jet)
 	if minima is not None:
